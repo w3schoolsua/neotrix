@@ -1,0 +1,114 @@
+/* NeotrixUI – Компонент текстових полів */
+
+/* 🎨 Базові токени для інпутів */
+:root {
+    --ntx-input-bg: rgb(255, 255, 255);
+    --ntx-input-bg-hover: rgb(239, 235, 235);
+    --ntx-input-bg-focus: rgba(225, 225, 228, 0.85);
+    --ntx-input-border: rgba(148, 163, 184, 0.35);
+    --ntx-input-border-hover: rgba(148, 163, 184, 0.55);
+    --ntx-input-border-focus: rgba(177, 185, 253, 0.9);
+    --ntx-input-text: #000000;
+    --ntx-input-placeholder: rgb(16, 16, 16);
+    --ntx-input-error: #ef4444;
+    --ntx-input-success: #22c55e;
+    --ntx-input-label: #343435;
+    --ntx-input-help: #3c0a01;
+    --ntx-input-radius: 0.75rem;
+    --ntx-input-padding: 0.65rem 1rem;
+    --ntx-transition-fast: 150ms ease-out;
+    --ntx-transition-normal: 220ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.ntx-theme-dark {
+    --ntx-input-bg: rgb(62, 61, 61);
+    --ntx-input-bg-hover: rgb(57, 56, 56);
+    --ntx-input-bg-focus: rgba(41, 40, 40, 0.85);
+    --ntx-input-border: rgba(35, 37, 43, 0.35);
+    --ntx-input-border-hover: rgba(102, 113, 128, 0.55);
+    --ntx-input-border-focus: rgba(56, 66, 143, 0.9);
+    --ntx-input-text: #fdfdfd;
+    --ntx-input-placeholder: rgb(172, 166, 166);
+    --ntx-input-error: #f30606;
+    --ntx-input-success: #028f34;
+    --ntx-input-label: #cbd5e1;
+    --ntx-input-help: #94a3b8;
+    --ntx-input-radius: 0.75rem;
+    --ntx-input-padding: 0.65rem 1rem;
+    --ntx-transition-fast: 150ms ease-out;
+    --ntx-transition-normal: 220ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* 🔧 Базовий стиль інпутів */
+.ntx-input {
+    width: 100%;
+    padding: var(--ntx-input-padding);
+    background: var(--ntx-input-bg);
+    border: 1px solid var(--ntx-input-border);
+    border-radius: var(--ntx-input-radius);
+    color: var(--ntx-input-text);
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition:
+            background var(--ntx-transition-normal),
+            border-color var(--ntx-transition-fast),
+            box-shadow var(--ntx-transition-normal),
+            color var(--ntx-transition-fast);
+}
+
+/* 📝 Placeholder */
+.ntx-input::placeholder {color: var(--ntx-input-placeholder);}
+
+/* 🖱️ Hover */
+.ntx-input:hover:not(:disabled):not([readonly]) {
+    background: var(--ntx-input-bg-hover);border-color: var(--ntx-input-border-hover);
+}
+
+/* 🔵 Focus */
+.ntx-input:focus {
+    background: var(--ntx-input-bg-focus);border-color: var(--ntx-input-border-focus);
+    box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.9), 0 0 0 3px rgba(79, 70, 229, 0.4);
+}
+
+/* 🚫 Disabled */
+.ntx-input:disabled {
+    opacity: 0.55;cursor: not-allowed;background: rgba(15, 23, 42, 0.35);}
+
+/* 📘 Readonly */
+.ntx-input[readonly] {background: rgba(15, 23, 42, 0.4);border-style: dashed;cursor: default;}
+
+/* 🧩 СТАНИ ВАЛІДАЦІЇ        */
+/* ❌ Помилка */
+.ntx-input--error {border-color: var(--ntx-input-error);color: var(--ntx-input-error);}
+.ntx-input--error:focus {box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.9), 0 0 0 3px rgba(239, 68, 68, 0.4);}
+
+/* ✔️ Успіх */
+.ntx-input--success {border-color: var(--ntx-input-success);color: var(--ntx-input-success);}
+.ntx-input--success:focus {box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.9), 0 0 0 3px rgba(34, 197, 94, 0.4);}
+
+/* 🧱 Текстові області */
+.ntx-textarea {min-height: 120px;resize: vertical;line-height: 1.45;}
+.ntx-textarea::-webkit-scrollbar {width: 6px;}
+.ntx-textarea::-webkit-scrollbar-thumb {background: rgba(148, 163, 184, 0.3);border-radius: 10px;}
+
+/* 🔐 Поля пароля */
+/* Контейнер для інпуту з іконкою */
+.ntx-input-wrapper {position: relative;width: 100%;display: flex;align-items: center;}
+
+/* Іконка всередині інпуту */
+.ntx-input-icon {position: absolute;right: 0.9rem;font-size: 1.1rem;color: var(--ntx-input-placeholder);cursor: pointer;transition: color var(--ntx-transition-fast);}
+.ntx-input-icon:hover {color: var(--ntx-input-text);}
+
+/* Додатковий відступ для інпуту з іконкою */
+.ntx-input--with-icon {padding-right: 2.6rem;}
+
+/* 📏 Розміри інпутів */
+.ntx-input--sm {padding: 0.45rem 0.8rem;font-size: 0.85rem;}
+.ntx-input--lg {padding: 0.85rem 1.2rem;font-size: 1.05rem;}
+
+/* 🏷️ Лейбли та хелп-текст */
+.ntx-label {display: block;margin-bottom: 0.35rem;font-size: 0.9rem;color: var(--ntx-input-label);}
+.ntx-help {margin-top: 0.35rem;font-size: 0.8rem;color: var(--ntx-input-help);}
+.ntx-help--error {color: var(--ntx-input-error);}
+.ntx-help--success {color: var(--ntx-input-success);}

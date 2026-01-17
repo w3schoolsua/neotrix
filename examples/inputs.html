@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeotrixUI — Inputs Demo</title>
+  <script src="../js/themes.js"></script>
+  <link rel="stylesheet" href="../css/neotrix.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/components/inputs.css">
+</head>
+
+<body>
+<div class="ntx-container">
+  <header class="ntx-section" style="display:flex; justify-content:space-between; align-items:center;">
+    <h1 class="ntx-title">NeotrixUI — Inputs</h1>
+    <button class="ntx-theme-toggle-btn" onclick="neotrixToggleTheme()"><span>☀️</span></button>
+  </header>
+
+  <!-- TEXT -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Text</h2>
+    <label class="ntx-label">Ваше ім’я</label>
+    <label>
+      <input type="text" class="ntx-input" placeholder="Введіть ім’я">
+    </label>
+  </section>
+
+  <!-- EMAIL -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Email</h2>
+    <label class="ntx-label">Email</label>
+    <label>
+      <input type="email" class="ntx-input" placeholder="example@mail.com">
+    </label>
+  </section>
+
+  <!-- PASSWORD -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Password</h2>
+    <label class="ntx-label">Пароль</label>
+    <div class="ntx-input-wrapper">
+      <input type="password" aria-label='Пароль' class="ntx-input ntx-input--with-icon" placeholder="Ваш пароль">
+      <span class="ntx-input-icon">👁️</span>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Search</h2>
+    <label class="ntx-label">Пошук</label>
+    <label>
+      <input type="search" class="ntx-input" placeholder="Пошук...">
+    </label>
+  </section>
+
+  <!-- TEL -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Телефон</h2>
+    <label class="ntx-label">Номер телефону</label>
+    <label>
+      <input type="tel" class="ntx-input" placeholder="+380 00 000 00 00">
+    </label>
+  </section>
+
+  <!-- NUMBER -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Number</h2>
+    <label class="ntx-label">Вік</label>
+    <label>
+      <input type="number" class="ntx-input" placeholder="18">
+    </label>
+  </section>
+
+  <!-- TEXTAREA -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Textarea</h2>
+    <label class="ntx-label">Опис</label>
+    <label>
+      <textarea class="ntx-input ntx-textarea" placeholder="Напишіть щось..."></textarea>
+    </label>
+  </section>
+
+  <!-- SIZES -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Розміри</h2>
+    <label>
+      <input class="ntx-input ntx-input--sm" placeholder="Малий">
+    </label>
+    <br><br>
+    <input class="ntx-input ntx-input--lg" placeholder="Великий">
+  </section>
+</div>
+
+<!-- Ядро JS -->
+<script src="../js/neotrix.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* NeotrixUI — DEMO PAGE STYLES */
+
+body {
+    padding: 24px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--ntx-bg);
+    color: var(--ntx-text);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.ntx-demo-title {
+    font-size: 1.8rem;
+}
+
+.ntx-demo-subtitle {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.75rem;
+}
+
+.ntx-demo-section {
+    margin-bottom: 2rem;
+}
+
+.ntx-theme-toggle-btn {
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--ntx-border);
+    background: var(--ntx-bg-elevated);
+    color: var(--ntx-text);
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.ntx-theme-toggle-btn:hover {
+    background: var(--ntx-accent);
+    color: #ffffff;
+    border-color: var(--ntx-accent-hover);
+}

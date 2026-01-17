@@ -1,0 +1,9 @@
+/* =========================================================
+   NovaUI — UTILS: DISPLAY
+   Утиліти відображення
+   ========================================================= */
+
+.flex { display: flex; }
+.grid { display: grid; }
+.inline { display: inline; }
+.block { display: block; }
