@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeotrixUI — Buttons Demo</title>
+  <script src="../js/themes.js"></script>
+  <link rel="stylesheet" href="../css/neotrix.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+</head>
+
+<body>
+<div class="ntx-container">
+  <!-- Заголовок + перемикач теми -->
+  <header class="ntx-section" style="display:flex; justify-content:space-between; align-items:center;">
+    <h1 class="ntx-title">Neotrix — Buttons</h1>
+    <button class="ntx-theme-toggle-btn" onclick="neotrixToggleTheme()">
+      <span>☀️</span>
+    </button>
+  </header>
+  <h2>Приклади кнопок, які можна створити за допомогою Neotrix</h2>
+  <!-- PRIMARY -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Primary Buttons</h2>
+    <button class="ntx-btn ntx-btn--primary">Primary</button>
+    <button class="ntx-btn ntx-btn--primary ntx-btn--sm">Small</button>
+    <button class="ntx-btn ntx-btn--primary ntx-btn--lg">Large</button>
+  </section>
+
+  <!-- SECONDARY -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Secondary Buttons</h2>
+
+    <button class="ntx-btn ntx-btn--secondary">Secondary</button>
+    <button class="ntx-btn ntx-btn--secondary ntx-btn--sm">Small</button>
+    <button class="ntx-btn ntx-btn--secondary ntx-btn--lg">Large</button>
+  </section>
+
+  <!-- OUTLINE -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Outline Buttons</h2>
+
+    <button class="ntx-btn ntx-btn--outline">Outline</button>
+    <button class="ntx-btn ntx-btn--outline ntx-btn--sm">Small</button>
+    <button class="ntx-btn ntx-btn--outline ntx-btn--lg">Large</button>
+  </section>
+
+  <!-- GHOST -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Ghost Buttons</h2>
+
+    <button class="ntx-btn ntx-btn--ghost">Ghost</button>
+    <button class="ntx-btn ntx-btn--ghost ntx-btn--sm">Small</button>
+    <button class="ntx-btn ntx-btn--ghost ntx-btn--lg">Large</button>
+  </section>
+
+  <!-- SEMANTIC -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Semantic Buttons</h2>
+
+    <button class="ntx-btn ntx-btn--success">Success</button>
+    <button class="ntx-btn ntx-btn--danger">Danger</button>
+  </section>
+
+  <!-- ICON BUTTONS -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Icon Buttons</h2>
+
+    <button class="ntx-btn ntx-btn--primary ntx-btn--icon">
+      <span class="ntx-btn__icon">⭐</span>
+    </button>
+
+    <button class="ntx-btn ntx-btn--secondary ntx-btn--icon">
+      <span class="ntx-btn__icon">⚙️</span>
+    </button>
+
+    <button class="ntx-btn ntx-btn--outline ntx-btn--icon">
+      <span class="ntx-btn__icon">🔍</span>
+    </button>
+  </section>
+
+  <!-- BLOCK BUTTON -->
+  <section class="ntx-section">
+    <h2 class="ntx-subtitle">Block Button</h2>
+
+    <button class="ntx-btn ntx-btn--primary ntx-btn--block">Full Width Button</button>
+  </section>
+
+</div>
+
+<!-- Ядро JS -->
+<script src="../js/neotrix.js"></script>
+</body>
+</html>
