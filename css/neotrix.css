@@ -10,37 +10,7 @@
    ==================================== */
 /* Reset (мінімальний) */
 * {margin: 0;padding: 0;box-sizing: border-box;}
-/* CSS-змінні (базові) */
-:root {
-    /* Кольори за замовчуванням базові (світла тема) (перевизначаються темами) */
-    --ntx-bg: #ffffff;
-    --ntx-bg-elevated: #f7f7f7;
-    --ntx-surface: #ffffff;
-    --ntx-text: #111111;
-    --ntx-muted: #666666;
-    --ntx-border: #dddddd;
-    --ntx-border-strong: #bbbbbb;
-    --ntx-accent: #0078ff;
-    --ntx-accent-hover: #005fcc;
 
-    /* Відступи */
-    --ntx-space-xs: 4px;
-    --ntx-space-sm: 8px;
-    --ntx-space-md: 16px;
-    --ntx-space-lg: 24px;
-    --ntx-space-xl: 32px;
-
-    /* Радіуси */
-    --ntx-radius-sm: 4px;
-    --ntx-radius-md: 8px;
-    --ntx-radius-lg: 12px;
-    /* Тіні */
-    --ntx-shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-    --ntx-shadow-md: 0 2px 6px rgba(0,0,0,0.15);
-    /* Анімації */
-    --ntx-fast: 0.15s;
-    --ntx-normal: 0.3s;
-}
 /* Базові стилі документа */
 body {
     background: var(--ntx-bg);
@@ -65,32 +35,12 @@ h2, .ntx-subtitle {font-size: 1.2rem; margin: var(--ntx-space-lg) 0 var(--ntx-sp
 /* Секції */
 .ntx-section {margin-bottom: var(--ntx-space-xl);}
 
-/* Кнопка перемикання теми
-.ntx-theme-toggle-btn {
-    padding: 0.4rem 0.9rem;
-    border-radius: 999px;
-    border: 1px solid var(--ntx-border);
-    background: var(--ntx-bg-elevated);
-    color: var(--ntx-text);
-    cursor: pointer;
-    font-size: 0.85rem;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;}
-.ntx-theme-toggle-btn:hover {background: var(--ntx-accent); color: #ffffff; border-color: var(--ntx-accent-hover);}
-*/
 /* Плавна анімація теми */
 html.ntx-animate-theme,
 html.ntx-animate-theme body,
-html.ntx-animate-theme * {
-    transition:
-            background-color var(--ntx-normal),
-            color var(--ntx-normal),
-            border-color var(--ntx-normal);
-}
+html.ntx-animate-theme * {transition: background-color var(--ntx-normal), color var(--ntx-normal), border-color var(--ntx-normal);}
 
-/* ---------------------------------------------------------
-   7. Кнопка перемикання теми
-   --------------------------------------------------------- */
-
+/* Кнопка перемикання теми */
 .ntx-theme-toggle-btn {
     width: 38px;
     height: 38px;
@@ -103,37 +53,14 @@ html.ntx-animate-theme * {
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
-    transition:
-            background-color 0.3s ease,
-            color 0.3s ease,
-            border-color 0.3s ease,
-            transform 0.25s ease;
-}
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.25s ease;}
 /* Hover */
-.ntx-theme-toggle-btn:hover {
-    background: var(--ntx-accent);
-    color: #ffffff;
-    border-color: var(--ntx-accent-hover);
-    transform: scale(1.08);
-}
+.ntx-theme-toggle-btn:hover {background: var(--ntx-accent);color: #fff;border-color: var(--ntx-accent-hover);transform: scale(1.08);}
 /* Анімація появи */
-.ntx-theme-toggle-btn {
-    opacity: 0;
-    transform: scale(0.8);
-    animation: ntx-theme-btn-fade 0.4s ease forwards;
-}
+.ntx-theme-toggle-btn {opacity: 0;transform: scale(0.8);animation: ntx-theme-btn-fade 0.4s ease forwards;}
 @keyframes ntx-theme-btn-fade {
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+    to {opacity: 1;transform: scale(1);}}
 /* Анімація зміни іконки */
-.ntx-theme-toggle-btn span {
-    display: inline-block;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-}
-.ntx-theme-toggle-btn span.ntx-hide {
-    opacity: 0;
-    transform: scale(0.6);
-}
+.ntx-theme-toggle-btn span {display: inline-block;transition: opacity 0.25s ease, transform 0.25s ease;}
+.ntx-theme-toggle-btn span.ntx-hide {opacity: 0;transform: scale(0.6);}
+hr {border: none;height: 1px;background-color: var(--ntx-hr-color);margin: 1rem 0}

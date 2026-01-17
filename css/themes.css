@@ -23,89 +23,59 @@
     --ntx-success: #43a047;
     --ntx-warning: #fdd835;
     --ntx-info: #1e88e5;
+
+    --ntx-hr-color: #dddddd;
     /* Тіні */
-    --ntx-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-    --ntx-shadow-md: 0 2px 8px rgba(0,0,0,0.12);
+    --ntx-shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --ntx-shadow-md: 0 2px 6px rgba(0,0,0,0.15);
+    /* Відступи */
+    --ntx-space-xs: 4px;
+    --ntx-space-sm: 8px;
+    --ntx-space-md: 16px;
+    --ntx-space-lg: 24px;
+    --ntx-space-xl: 32px;
+    /* Радіуси */
+    --ntx-radius-sm: 4px;
+    --ntx-radius-md: 8px;
+    --ntx-radius-lg: 12px;
+    /* Анімації */
+    --ntx-fast: 0.15s;
+    --ntx-normal: 0.3s;
 }
 
-/* Світла тема (явний клас)
-   ----------------------------------------------------------
-   Рекомендація:
-   - використовувати .ntx-theme-light на <html> або <body>
-   - це дозволяє явно зафіксувати світлу тему
-   --------------------------------------------------------- */
-
-.ntx-theme-light {
-    /* Фон */
-    --ntx-bg: #ffffff;
-    --ntx-bg-elevated: #f7f7f7;
-    --ntx-surface: #ffffff;
-    /* Текст */
-    --ntx-text: #111111;
-    --ntx-text-muted: #666666;
-    /* Межі */
-    --ntx-border: #dddddd;
-    --ntx-border-strong: #bbbbbb;
-    /* Акцент */
-    --ntx-accent: #0078ff;
-    --ntx-accent-hover: #005fcc;
-    /* Стан */
-    --ntx-danger: #e53935;
-    --ntx-success: #43a047;
-    --ntx-warning: #fdd835;
-    --ntx-info: #1e88e5;
-    /* Тіні */
-    --ntx-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-    --ntx-shadow-md: 0 2px 8px rgba(0,0,0,0.12);
-}
-/* ---------------------------------------------------------
-   3. Темна тема
-   ---------------------------------------------------------
+/* Темна тема ---
    Рекомендація:
    - додавати клас .ntx-theme-dark до <html> або <body>
    - логіка перемикання реалізується в themes.js
-   --------------------------------------------------------- */
-
+*/
 .ntx-theme-dark {
     --ntx-bg: #0f1115;
     --ntx-bg-elevated: #171921;
     --ntx-surface: #1e212b;
-
     --ntx-text: #f5f5f7;
     --ntx-text-muted: #a0a3b1;
-
     --ntx-border: #2a2d3a;
     --ntx-border-strong: #3a3e4f;
-
     --ntx-accent: #4da3ff;
     --ntx-accent-hover: #2f82dd;
-
     --ntx-danger: #ef5350;
     --ntx-success: #66bb6a;
     --ntx-warning: #ffeb3b;
     --ntx-info: #42a5f5;
-
+    --ntx-hr-color: #333;
     --ntx-shadow-sm: 0 1px 3px rgba(0,0,0,0.6);
     --ntx-shadow-md: 0 2px 10px rgba(0,0,0,0.7);
 }
 
-/* ---------------------------------------------------------
-   Іконки теми
-   --------------------------------------------------------- */
-
+/* Іконки теми */
 .ntx-theme-light {--ntx-theme-icon: "☀️";}
-
 .ntx-theme-dark {--ntx-theme-icon: "🌙";}
-
-/* ---------------------------------------------------------
-   4. Місце для майбутніх тем
-   ---------------------------------------------------------
+/* Місце для майбутніх тем:
    Приклади:
    .ntx-theme-solar
    .ntx-theme-ocean
    .ntx-theme-contrast
-   --------------------------------------------------------- */
-
+*/
 /* .ntx-theme-solar { ... } */
 /* .ntx-theme-ocean { ... } */
 /* .ntx-theme-contrast { ... } */
